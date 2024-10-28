@@ -166,10 +166,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} 140 -70 0 0 {name=M2
-L=0.15
-W=1
-nf=1
-mult=1
+L=2.4u
+W=240u
+nf=10
+mult=5
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -180,9 +180,9 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} 0 70 0 0 {name=M3
-L=0.15
-W=1
-nf=1
+L=1.2u
+W=400u
+nf=25
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -194,9 +194,9 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} 280 70 0 1 {name=M4
-L=0.15
-W=1
-nf=1
+L=1.2u
+W=400u
+nf=25
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -208,10 +208,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} 740 -70 0 0 {name=M5
-L=0.15
-W=1
-nf=1
-mult=1
+L=2.4u
+W=450u
+nf=10
+mult=10
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -222,10 +222,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} 1000 -70 0 0 {name=M6
-L=0.15
-W=1
-nf=1
-mult=1
+L=1.2u
+W=140u
+nf=7
+mult=5
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -236,10 +236,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 40 270 2 0 {name=M7
-L=0.15
-W=1
-nf=1 
-mult=1
+L=1.2u
+W=450u
+nf=15 
+mult=6
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -250,10 +250,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 240 270 0 0 {name=M8
-L=0.15
-W=1
-nf=1 
-mult=1
+L=1.2u
+W=450u
+nf=15 
+mult=6
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -264,10 +264,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 740 190 0 0 {name=M9
-L=0.15
-W=1
-nf=1 
-mult=1
+L=0.6u
+W=378u
+nf=9
+mult=12
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -278,10 +278,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 1000 190 0 0 {name=M10
-L=0.15
-W=1
-nf=1 
-mult=1
+L=1.2u
+W=105u
+nf=7 
+mult=5
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -300,28 +300,32 @@ C {gnd.sym} 260 360 0 0 {name=l6 lab=GND}
 C {gnd.sym} 760 280 0 0 {name=l7 lab=GND}
 C {gnd.sym} 1020 280 0 0 {name=l8 lab=GND}
 C {gnd.sym} -140 360 0 0 {name=l9 lab=GND}
-C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_l1.sym} -140 270 2 0 {name=R1
-W=1
-L=1
-model=res_generic_l1
-mult=1}
-C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_l1.sym} -140 150 0 0 {name=R2
-W=4u
-L=20.5u
-model=res_generic_l1
-mult=1}
-C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_l1.sym} 460 130 0 0 {name=R3
-W=1
-L=1
-model=res_generic_l1
-mult=1}
-C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_l1.sym} 550 80 3 0 {name=R4
-W=1
-L=1
-model=res_generic_l1
-mult=1}
-C {pdk/sky130A/libs.tech/xschem/sky130_fd_pr/cap_mim_m3_1.sym} 650 80 3 0 {name=C1 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
 C {ipin.sym} -60 70 0 0 {name=p1 lab=Vin+}
 C {ipin.sym} 330 70 2 0 {name=p2 lab=Vin-
 }
 C {opin.sym} 1080 80 0 0 {name=p4 lab=Vout}
+C {res.sym} -140 150 0 0 {name=R5
+value=18568.9
+footprint=res_generic_l1
+device=resistor
+m=1}
+C {res.sym} -140 270 0 0 {name=R1
+value=18568.9
+footprint=res_generic_l1
+device=resistor
+m=1}
+C {res.sym} 460 130 0 0 {name=R2
+value=250.325
+footprint=res_generic_l1
+device=resistor
+m=1}
+C {capa-2.sym} 650 80 3 0 {name=C2
+m=1
+value=20.6797p
+footprint=cap_mim_m3_1
+device=polarized_capacitor}
+C {res.sym} 550 80 1 0 {name=R3
+value=250.325
+footprint=res_generic_l1
+device=resistor
+m=1}
